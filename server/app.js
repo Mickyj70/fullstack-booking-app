@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/hotel", require("./routes/hotels"));
 // app.use("/api/room", require("./routes/rooms"));
-// app.use("/api/user", require("./routes/users"));
+app.use("/api/user", require("./routes/users"));
 
 mongoose.connection.once("open", () => {
   console.log("DB connected");
